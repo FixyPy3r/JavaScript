@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter distancia</title>
+</head>
+<body>
+     <h2>Celsius para Kelvin/Fahrenheit</h2>
+  <button onclick="TemperaturaemCº()">Temperatura em Cº</button>
+  <section id="resultadotemperatura"></section>
+
+  <script>
+    function TemperaturaemCº() {
+      let celsius = Number(prompt("Digite um valor numérico em celsius"));
+      
+
+      let K = celsius + 273.15;
+      let F = (celsius*9/5) + 32;
+
+      let saida = `<p>A Temperatura ${celsius} cº para kelvin e fahrenheit é:</p>
+        <ul>
+          <li>${K} Kelvin (K)</li>
+          <li>${F} Fahrenheit (°F)</li>
+        </ul>
+      `
+      document.getElementById("resultadotemperatura").innerHTML = saida;
+    }
+  </script>
+</body>
+</html>

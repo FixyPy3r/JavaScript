@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter distancia</title>
+</head>
+<body>
+     <h2>Conversor de distância automático</h2>
+  <button onclick="converterDistancia()">Converter Distância</button>
+  <section id="resultadoDistancia"></section>
+
+  <script>
+    function converterDistancia() {
+      let metros = Number(prompt("Digite um valor numérico em metros"));
+      
+
+      let km = metros / 1000;
+      let hm = metros / 100;
+      let dam = metros / 10;
+      let dm = metros * 10;
+      let cm = metros * 100;
+      let mm = metros * 1000;
+
+      let saida = `<p>A distância de ${metros} metro(s) corresponde:</p>
+        <ul>
+          <li>${km} km</li>
+          <li>${hm} hm</li>
+          <li>${dam} dam</li>
+          <li>${dm} dm</li>
+          <li>${cm} cm</li>
+          <li>${mm} mm</li>
+        </ul>
+      `
+      document.getElementById("resultadoDistancia").innerHTML = saida;
+    }
+  </script>
+</body>
+</html>
