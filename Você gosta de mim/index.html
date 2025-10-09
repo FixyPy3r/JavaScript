@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Você gosta de mim?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #ffeef0;
+    }
+    #mensagem {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #d6336c;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    #sim {
+      background-color: #28a745;
+      color: white;
+    }
+    #nao {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Você gosta de mim?</h1>
+  <button id="sim">Sim</button>
+  <button id="nao">Não</button>
+  <div id="mensagem"></div>
+
+  <script>
+    const botaoSim = document.getElementById('sim');
+    const botaoNao = document.getElementById('nao');
+    const mensagem = document.getElementById('mensagem');
+
+    botaoSim.addEventListener('click', () => {
+      mensagem.textContent = 'Aaaawn ❤️ Obrigada! Você fez a escolha certa';
+    });
+
+    botaoNao.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
+      const y = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
+      botaoNao.style.left = `${x}px`;
+      botaoNao.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
